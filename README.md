@@ -46,14 +46,14 @@ Define the **play_action()** function that takes in the neural network model and
 Set the discount factor (**gamma**) for the rewards.
 
 Define the **fit()** function that takes in the neural network model, the memory buffer, and the exploration rate as inputs, and returns the updated model and exploration rate. This function does the following:
-    - Randomly samples a batch of transitions from the memory buffer.
-    - Calculates the target Q-values for each transition, based on whether the transition resulted in a terminal state or not.
-    - Updates the Q-values for the given state-action pair in the neural network.
-    - Trains the neural network on the updated Q-values for the given state.
-    - Decays the exploration rate, if it is greater than the minimum exploration rate.
+  - Randomly samples a batch of transitions from the memory buffer.
+  - Calculates the target Q-values for each transition, based on whether the transition resulted in a terminal state or not.
+  - Updates the Q-values for the given state-action pair in the neural network.
+  - Trains the neural network on the updated Q-values for the given state.
+  - Decays the exploration rate, if it is greater than the minimum exploration rate.
 
 
-Define the state size and number of actions in the environment, and build the neural network model using the **Sequential()** and **Dense()** functions from Keras. The model has two hidden layers of 24 neurons each, and a linear output layer with a number of neurons equal to the number of actions in the environment.
+Define the **state_size** and **number_of _actions** in the environment, and build the neural network model using the **Sequential()** and **Dense()** functions from Keras. The model has two hidden layers of 24 neurons each, and a linear output layer with a number of neurons equal to the number of actions in the environment.
 
 Compile the neural network model using the mean squared error loss and the Adam optimizer.
 
